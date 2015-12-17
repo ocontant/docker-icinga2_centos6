@@ -1,3 +1,8 @@
+## This repository is based on the offiical CentOS 7 docker-icinga2 created by netway.de.  
+## I needed a version working with CentOS6 so I adapted the original one to worked on CentOS6
+## This README file is from the original repository.  If you find any bug in this version, please
+## forward your inquiry to ocontant via the github issue feature.
+
 # docker-icinga2
 
 This repository is used as source for the
