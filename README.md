@@ -1,11 +1,11 @@
 ## This repository is based on the offiical CentOS 7 docker-icinga2 created by netway.de.  
 ## I needed a version working with CentOS6 so I adapted the original one to worked on CentOS6
-## This README file is from the original repository.  If you find any bug in this version, please forward your inquiry to ocontant via the github issue feature.
 
 # docker-icinga2
 
-This repository is used as source for the
-docker image `icinga/icinga2` located at [Docker Hub](https://registry.hub.docker.com/repos/icinga/).
+This repository is used as source for the CentOS6 
+docker image `ocontant/centos-icinga2` located at 
+[Docker Hub](https://hub.docker.com/r/ocontant/centos-icinga2).
 
 ## Requirements
 
@@ -15,12 +15,12 @@ docker image `icinga/icinga2` located at [Docker Hub](https://registry.hub.docke
 
 This container is used for demos, tests and development only.
 
-If you encounter bugs, please open a new issue at [dev.icinga.org](https://dev.icinga.org/projects/icinga-tools)
-and/or send a patch.
+If you encounter bugs, please open a new issue at 
+(https://github.com/ocontant/docker-icinga2_centos6/issues) and/or send a patch.
 
 ## Image details
 
-* Based on centos:centos7 (similar to the Vagrant boxes)
+* Based on centos:centos6 
 * Icinga 2 w/ DB IDO MySQL, Icinga Web 2, MariaDB, Apache2
 * Icinga 2 API
 * Default installation/credentials. Use at your own risk.
@@ -57,8 +57,8 @@ Attach to a running container using `exec` and the container name.
 
 Build a new container based on this repository:
 
-    $ sudo docker pull centos:centos7
-    $ sudo docker build -t icinga/icinga2 .
+    $ sudo docker pull centos:centos6
+    $ sudo docker build -t ocontant/centos-icinga2 .
 
 ### SSH Access
 
@@ -156,4 +156,4 @@ These volumes can be mounted in order to test and develop various stuff.
 # Thanks
 
 * Jordan Jethwa for the initial [icinga2 docker image for Debian](https://github.com/jjethwa/icinga2)
-
+* Netway.de for the original CentOS7 images that this version is inspired from

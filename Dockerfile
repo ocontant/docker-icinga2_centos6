@@ -51,10 +51,11 @@ RUN [ -f /etc/rpm/macros.imgcreate ] && sed -i '/excludedocs/d' /etc/rpm/macros.
 RUN [ -f /etc/yum.conf ] && sed -i '/nodocs/d' /etc/yum.conf || exit 0
 
 #Installing icinga2
-RUN yum -y install vim hostname bind-utils cronie logrotate supervisor openssh openssh-server openssh-client rsyslog sudo passwd sed which vim-enhanced pwgen psmisc mailx \
- httpd nagios-plugins-all mariadb-server mariadb-libs mariadb; \
+RUN yum -y install vim hostname bind-utils cronie logrotate supervisor openssh openssh-server openssh-clients rsyslog sudo passwd sed which vim-enhanced pwgen psmisc mailx \
+ httpd nagios-plugins-all mysql mysql-server mysql-libs ; \
  yum -y install --enablerepo=icinga-snapshot-builds icinga2 icinga2-doc icinga2-ido-mysql icingaweb2 icingacli php-ZendFramework php-ZendFramework-Db-Adapter-Pdo-Mysql; \
- yum clean all;
+ yum clean all; \
+ chkconfig icinga2 on;
 
 # create api certificates and users (will be overridden later)
 RUN icinga2 api setup
