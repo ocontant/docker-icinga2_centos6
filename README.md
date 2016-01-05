@@ -5,7 +5,7 @@
 
 This repository is used as source for the CentOS6 
 docker image `ocontant/centos6-icinga2` located at 
-[Docker Hub](https://hub.docker.com/r/ocontant/centos-icinga2).
+[Docker Hub](https://hub.docker.com/r/ocontant/ocontant/centos6-icinga2).
 
 ## Requirements
 
